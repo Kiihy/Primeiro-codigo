@@ -1,0 +1,117 @@
+* {
+
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+
+}
+
+body {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #e0f7fa url('/src/imagens/1.png') no-repeat center center fixed; /* Cor de fundo azul com imagem */
+    background-size: cover; /* Faz a imagem preencher a tela */
+    overflow: hidden; /* Evita rolagem com o efeito de neve */
+
+}
+
+.portfolio-container {
+    background-color: rgba(255, 255, 255, 0); /* Fundo totalmente transparente */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+    z-index: 3; /* Garante que o conteúdo fique sobre os flocos de neve */
+    position: relative; /* Para que o z-index funcione */
+}
+
+/* Estilo para texto legível */
+.portfolio-container h1, .portfolio-container p {
+    color: #333; /* Um tom escuro de cinza que é legível */
+    font-weight: bold; /* Deixa o texto em negrito */
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5); /* Sombra leve para melhorar a legibilidade */
+}
+
+.bio-window {
+    margin-bottom: 20px;
+
+}
+
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+
+}
+
+h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+
+}
+
+p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.5;
+}
+
+.social-buttons {
+    display: flex;
+    justify-content: space-around;
+}
+
+.btn {
+    background-color: transparent; /* Fundo transparente */
+    color: #fff; /* Cor branca para os ícones e texto */
+    padding: 10px 15px;
+    border: none; /* Remove a borda */
+    font-size: 16px; /* Ajusta o tamanho do texto */
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none; /* Remove sublinhado */
+    transition: color 0.3s ease; /* Transição suave ao passar o mouse */
+}
+
+.btn i {
+    margin-right: 8px; /* Espaçamento entre o ícone e o texto */
+    font-size: 18px; /* Tamanho do ícone */
+}
+
+.btn:hover {
+    color: #dcdcdc; /* Muda a cor do texto e ícone ao passar o mouse */
+}
+
+/* Floco de neve */
+.snowflake {
+    position: absolute;
+    top: -10px;
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+    opacity: 0.7;
+    animation: fall linear;
+    z-index: 2; /* Garante que os flocos fiquem sobre a imagem de fundo */
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh);
+    }
+}
+
+.btn i {
+    margin-right: 8px; /* Adiciona espaço entre o ícone e o texto */
+    font-size: 16px;   /* Ajusta o tamanho do ícone */
+    vertical-align: middle; /* Centraliza o ícone com o texto */
+}
